@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do Tempo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <form action="buscar" method="POST">
+                <input id="campo" placeholder="Buscar Estado" name="nome" type="text">
+                <button id="btn" type="submit" name="mostrar_informacoes">Buscar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

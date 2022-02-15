@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <div class="box2">
+      <form>
+        <br>
+        <h3 id="info">Tempo agora em <br>{{ nome }}</h3>
+        <ul>
+          <img id="imagem" src="{{ geral[3] }}">
+          <h3 id="temperatura">{{ geral[0] }}º</h3>
+        </ul>
+        <br>
+        <ul class="lista_variaveis">
+          <li class="item">
+            <div class="_flex">
+              <span class="variavel_borda"></span>
+              <span class="vento">VENTO</span>
+            </div>
+            <span class="_flex1">{{ geral[1] }} km/h</span>
+          </li>
+          <li class="item2">
+            <div class="_flex">
+              <span class="variavel_borda"></span>
+              <span class="umidade">UMIDADE</span>
+            </div>
+            <div class="_flex">
+              <span class="_flex1">{{ geral[2] }}%</span>
+            </div>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <a id="redirecionar" href="{{ url_for('index') }}">Voltar</a>
+  </div>
+  
+</body>
+
+</html>
